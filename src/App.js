@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import ProductList from './components/ProductList';
 
-const NavbarStyles = styled.nav
+const NavbarStyles = styled.nav`
   display:flex;
-  justify-content : center;
+  justify-content : space-between;
   align-items: center;
   height: 10vh;
   background-color: #333;
@@ -14,9 +15,9 @@ const NavbarStyles = styled.nav
     color : #fff;
     text-decoration : none;
   }
-;
+`;
 
-const FooterStyles = styled.footer
+const FooterStyles = styled.footer`
   display:flex;
   justify-content : center;
   align-items : center;
@@ -27,7 +28,7 @@ const FooterStyles = styled.footer
   p{
     margin: 0;
   }
-;
+`;
 
 function App() {
   return (
@@ -40,9 +41,9 @@ function App() {
       </NavbarStyles>
 
       {/* Main content goes here */}
-
+      <ProductList/> 
       {/* Footer */}
-      <FooterStyles>
+      <FooterStyles> 
         <p>Made by Navya Arora</p>
       </FooterStyles>
     </div>

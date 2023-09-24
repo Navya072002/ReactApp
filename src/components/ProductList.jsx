@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const api_url = '';        //add url;
 
-const ProductCardStyles = styled.div
+const ProductCardStyles = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,11 +26,12 @@ const ProductCardStyles = styled.div
     p{
         margin  : 10px  0;
     }
+`;
 
 function ProductCard({ product }){
     return (
         <ProductCardStyles>
-            <img src={product.imageUrl} alt={product.name}>
+            <img src={product.imageUrl} alt={product.name}/>
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <p>${product.price}</p>
